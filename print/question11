@@ -1,0 +1,11 @@
+hw2_q1(0)
+ 
+Error:  f(a)*f(b) >= 0 
+ 
+function: cosh(x)+cos(x)-0
+hw2_q1(1)
+ 
+Error:  f(a)*f(b) >= 0 
+ 
+function: cosh(x)+cos(x)-1
+diary off

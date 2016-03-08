@@ -1,0 +1,174 @@
+diary on
+n =7;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+a
+
+a =
+
+     9.999999991205999e-01
+     1.000000004242121e+00
+     9.999999913289925e-01
+     1.000000009736548e+00
+     9.999999935124617e-01
+     1.000000002565518e+00
+     9.999999994423486e-01
+     1.000000000051410e+00
+
+n =9;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+a
+
+a =
+
+     1.000000233852442e+00
+     9.999984982765371e-01
+     1.000004255998176e+00
+     9.999930131832172e-01
+     1.000007322045036e+00
+     9.999949198891368e-01
+     1.000002333605081e+00
+     9.999993155635314e-01
+     1.000000116313898e+00
+     9.999999912729451e-01
+
+n =11;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+a
+
+a =
+
+     1.000004810053422e+00
+     9.999601890715759e-01
+     1.000148749620880e+00
+     9.996688167469776e-01
+     1.000488186174454e+00
+     9.994997469616920e-01
+     1.000363625210812e+00
+     9.998125077787580e-01
+     1.000067207073314e+00
+     9.999840493783369e-01
+     1.000002255992242e+00
+     9.999998559375356e-01
+
+n =13;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.368324e-18.] 
+[] 
+a
+
+a =
+
+     1.002111073598264e+00
+     9.803398433721897e-01
+     1.084120571733846e+00
+     7.810468107605623e-01
+     1.386789590294219e+00
+     5.102986192051208e-01
+     1.457142824037975e+00
+     6.814105462672228e-01
+     1.165757150566206e+00
+     9.364106189555650e-01
+     1.017484060239480e+00
+     9.967371914282078e-01
+     1.000370421893240e+00
+     9.999806776479036e-01
+
+n =7;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+cond(V,'inf')
+
+ans =
+
+     8.980828451955118e+08
+
+n =9;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+cond(V,'inf')
+
+ans =
+
+     5.035429948572099e+11
+
+n =11;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+cond(V,'inf')
+
+ans =
+
+     3.062023239345218e+14
+
+n =13;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+cond(V,'inf')
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.368324e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cond', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\matfun\cond.m', 46)" style="font-weight:bold">cond</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\matfun\cond.m',46,0)">line 46</a>)] 
+
+ans =
+
+     1.990776915846876e+17
+
+
+
+n=7;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+max(abs(ones(8,1)-a))
+
+ans =
+
+     9.736548012284629e-09
+
+n=9;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+max(abs(ones(10,1)-a))
+
+ans =
+
+     7.322045035840219e-06
+
+n=11;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+max(abs(ones(12,1)-a))
+
+ans =
+
+     5.002530383080295e-04
+
+n=13;
+x = (1+(0:1/n:1))';
+V = fliplr(vander(x));
+F= sum(V,2);
+a = V\F;
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.368324e-18.] 
+[] 
+max(abs(ones(14,1)-a))
+
+ans =
+
+     4.897013807948792e-01
+
+diary off

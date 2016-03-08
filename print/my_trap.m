@@ -1,0 +1,40 @@
+function y = my_trap(f,a,b,N)
+% This function computes the definite integral using the trapezoidal 
+% rule, the inputs are the function f as a string, the interval
+% a and b and the number of iterations N
+
+
+h = (b-a)/N;
+
+y=0;
+x=a;
+iter =0;
+% display array
+
+% calculate f(x_i) not including the endpoints
+for i =1: N-1
+    x = (a+i*h); 
+    y = y + 2*f(x);
+end
+
+%add endpoints to y
+y= y+f(a);
+y = y + f(b);
+y = y*(h/2);
+
+%disp(y);
+%dispvars(iter,3) = y;
+
+expected = integral(f,a,b);
+err = expected - y;
+err2 = err/h.^2;
+
+format short e
+% display junk
+%disp(' ');
+%disp('   N            h           approx               err             err/h^2');
+%disp('--------------------------------------------------------------------------');
+disp([N h y err err2]);
+%disp(' ');
+end
+
