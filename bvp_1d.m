@@ -1,12 +1,13 @@
 
- p = 6;
+ p = 10;
  n = 2^p;
  h = 1/n;
  x = h*(0:n)';
 
- u_h = exp(x) + (1-exp(1))*x - 1;  % true solution u(0)=u(1)=0
- f_h = -exp(x);                    % -u'' = f
- 
+ %u_h = exp(x) + (1-exp(1))*x - 1;  % true solution u(0)=u(1)=0
+ u_h =sin(pi*x).*exp(x);
+ %f_h = -exp(x);                    % -u'' = f
+ f_h = exp(x).*(pi.^2 .* sin(pi*x)- 2*pi.*cos(pi*x)); %rhs
  a = 2*ones(n-1,1)/(h^2);   % create a, b & c of the tridiagonal -D^2 
  b = -ones(n-1,1)/(h^2);   
  c = -ones(n-1,1)/(h^2);  
