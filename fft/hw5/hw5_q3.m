@@ -22,7 +22,14 @@ for i = 1: length(n)
 	vh = mydct(vtil);
 	
 	err(i) = max(abs(uh-vh));
-
+         
+  if (i < 5)
+        subplot(2,2,i)
+        plot(xh,uh,xh,vh,'*')
+        legend('uh','vh','location','northwest')
+    
+        title([' N: ',num2str(N)]);
+    end
 end
 
 format short e
